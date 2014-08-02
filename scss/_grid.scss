@@ -1,0 +1,53 @@
+.container {
+	width: 90%;
+	max-width: $grid-max-width;
+	margin: 0 auto;
+	background-color: rgb(238,238,238);
+	@include clearfix;
+}
+
+.row {
+	margin: 0 -15px;
+	background-color: rgb(220,220,220);
+	@include clearfix;
+
+	&.spacing-top {
+		margin-top: $spacing;
+	}
+
+	&.spacing-bottom {
+		margin-bottom: $spacing;
+	}
+
+	&.spacing {
+		margin: $spacing auto;
+	}
+}
+
+[class*='col-'] {
+	float: left;
+	padding: 0 15px;
+	width: auto;
+	background-color: rgba(255,0,0,0.2);
+}
+
+// Grid Large
+
+@for $i from 1 through $grid-cols {
+	.col-#{$i} { 
+		width: 100% / $grid-cols * $i;
+	}
+}
+
+// Grid Medium
+@media #{$grid-large} {
+	.container {
+		width: 90%;
+	}
+
+	@for $i from 1 through $grid-cols {
+		.col-#{$i} { 
+			width: 100% / $grid-cols * $i;
+		}
+	}
+}
