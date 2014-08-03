@@ -1,12 +1,12 @@
 // Grid Variables
 $grid-cols: 12;
 $grid-max-width: 1200px;
-$grid-gutter: 30px;
+$grid-gutter: 15px;
 
 // Breakpoints
 $grid-large: "(min-width: 1025px)";
 $grid-medium: "(min-width: 991px)";
-$grid-tablet: "(min-width: 780px)";
+$grid-tablet: "(min-width: 720px)";
 $grid-phone-large: "(min-width: 520px)";
 $grid-phone-medium: "(min-width: 460px)";
 $grid-phone: "(min-width: 360px)";

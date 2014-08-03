@@ -7,7 +7,8 @@
 }
 
 .row {
-	margin: 0 -15px;
+	width: 100%;
+	margin: 0 ($grid-gutter * -1);
 	background-color: rgb(220,220,220);
 	@include clearfix;
 
@@ -26,21 +27,34 @@
 
 [class*='col-'] {
 	float: left;
-	padding: 0 15px;
+	padding: 0 $grid-gutter;
 	width: auto;
 	background-color: rgba(255,0,0,0.2);
+	margin: $spacing auto;
 }
 
-// Grid Large
-
+// Grid Phone
 @for $i from 1 through $grid-cols {
 	.col-#{$i} { 
-		width: 100% / $grid-cols * $i;
+		width: 100%;
+	}
+}
+
+// Grid Tablet
+@media #{$grid-tablet} {
+	.container {
+		width: 90%;
+	}
+
+	@for $i from 1 through $grid-cols {
+		.col-#{$i} { 
+			width: 50%;
+		}
 	}
 }
 
 // Grid Medium
-@media #{$grid-large} {
+@media #{$grid-medium} {
 	.container {
 		width: 90%;
 	}
