@@ -116,20 +116,13 @@ img {
   max-width: 1200px;
   margin: 0 auto;
   background-color: #eeeeee;
-  *zoom: 1;
-}
-.container:before, .container:after {
-  content: " ";
-  display: table;
-}
-.container:after {
-  clear: both;
+  padding: 0 15px;
 }
 
 .row {
-  width: 100%;
-  margin: 0 -15px;
+  display: block;
   background-color: gainsboro;
+  margin: 0 -15px;
   *zoom: 1;
 }
 .row:before, .row:after {
